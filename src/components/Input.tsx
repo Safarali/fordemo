@@ -5,45 +5,50 @@ type InputBaseProps = {
   isError: boolean;
   disabled: boolean;
 };
-const InputBase = styled.input<InputBaseProps>`
+const InputBase = styled.input.attrs((props) => ({
+  autoComplete: 'off',
+}))<InputBaseProps>`
   height: 5.4rem;
   width: 100%;
   font-size: 1.4rem;
   color: #000000;
-  border: 0.1rem solid #707070;
+  border: 0.1rem solid #cccccc;
   padding-left: 3.253rem;
+
   &:focus {
-    border: 0.1rem solid #000000;
+    border: 0.1rem solid #707070;
   }
 
   ${(props) =>
     props.isError &&
     css`
       border: 0.1rem solid #ff3b30;
+      &:focus {
+        border: 0.1rem solid #ff3b30;
+      }
     `}
 `;
 
 const LabelBase = styled.label`
   display: block;
   font-size: 1.6rem;
-  line-height: 1.6rem;
+  line-height: 2.3rem;
   color: #000000;
-  margin-bottom: 0.873rem;
 `;
 
 type LabelProps = {
   children: string;
-  inputId: string;
+  htmlFor: string;
 };
-export const Label: React.FC<LabelProps> = ({ children, inputId }) => {
-  return <LabelBase htmlFor={inputId}>{children}</LabelBase>;
+export const Label: React.FC<LabelProps> = ({ children, htmlFor }) => {
+  return <LabelBase htmlFor={htmlFor}>{children}</LabelBase>;
 };
 
 type InputProps = {
   type: 'password' | 'text' | 'email';
   id: string;
   isError: boolean;
-  isDisabled: boolean;
+  disabled: boolean;
   placeholder: string;
   value: string;
   onChange: (value: string) => void;
@@ -52,7 +57,7 @@ type InputProps = {
 const Input: React.FC<InputProps> = ({
   type,
   isError,
-  isDisabled,
+  disabled,
   placeholder,
   id,
   onChange,
@@ -66,7 +71,7 @@ const Input: React.FC<InputProps> = ({
       type={type}
       placeholder={placeholder}
       isError={isError}
-      disabled={isDisabled}
+      disabled={disabled}
       value={value}
       onChange={handleOnChange}
       id={id}
