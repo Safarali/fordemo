@@ -1,4 +1,4 @@
-import React, { ReactEventHandler } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 type InputBaseProps = {
@@ -6,9 +6,8 @@ type InputBaseProps = {
   disabled: boolean;
 };
 const InputBase = styled.input<InputBaseProps>`
-  height: 5.424rem;
+  height: 5.4rem;
   width: 100%;
-  font-family: 'Poppins';
   font-size: 1.4rem;
   color: #000000;
   border: 0.1rem solid #707070;
@@ -26,7 +25,6 @@ const InputBase = styled.input<InputBaseProps>`
 
 const LabelBase = styled.label`
   display: block;
-
   font-size: 1.6rem;
   line-height: 1.6rem;
   color: #000000;
