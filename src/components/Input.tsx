@@ -24,8 +24,26 @@ const InputBase = styled.input<InputBaseProps>`
     `}
 `;
 
+const LabelBase = styled.label`
+  display: block;
+
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #000000;
+  margin-bottom: 0.873rem;
+`;
+
+type LabelProps = {
+  children: string;
+  inputId: string;
+};
+export const Label: React.FC<LabelProps> = ({ children, inputId }) => {
+  return <LabelBase htmlFor={inputId}>{children}</LabelBase>;
+};
+
 type InputProps = {
   type: 'password' | 'text' | 'email';
+  id: string;
   isError: boolean;
   isDisabled: boolean;
   placeholder: string;
@@ -38,6 +56,7 @@ const Input: React.FC<InputProps> = ({
   isError,
   isDisabled,
   placeholder,
+  id,
   onChange,
   value,
 }) => {
@@ -52,6 +71,7 @@ const Input: React.FC<InputProps> = ({
       disabled={isDisabled}
       value={value}
       onChange={handleOnChange}
+      id={id}
     />
   );
 };
