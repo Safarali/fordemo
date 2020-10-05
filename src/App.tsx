@@ -11,12 +11,6 @@ function App() {
       <BrowserRouter>
         <Routes />
         <GlobalStyle />
-        <NavLink exact to="/signin">
-          Signin
-        </NavLink>
-        <NavLink exact to="/signup">
-          Signup
-        </NavLink>
       </BrowserRouter>
     </div>
   );
