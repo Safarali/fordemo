@@ -1,9 +1,7 @@
 import React from 'react';
-import { BrowserRouter, NavLink } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes/Routes';
 import GlobalStyle from './components/GlobalStyle';
-import Signup from './pages/Signup';
-import Signin from './pages/Signin';
 
 function App() {
   return (

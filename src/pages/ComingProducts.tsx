@@ -1,27 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Logo, LogoBig } from '../components/Logo';
+import { LogoBig } from '../components/Logo';
+import Navbar from '../components/Navbar';
 
-const Header = styled.header`
-  height: 10rem;
-  width: 100%;
-  background-color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Main = styled.main`
+const Main = styled(Link)`
   height: 75.5rem;
-  width: 170.6rem;
+  width: calc(100% - 20rem);
   background: transparent
     linear-gradient(180deg, rgba(90, 200, 250, 0.6) 0%, #ffffff00 75.5rem) 0% 0%
     no-repeat padding-box;
   position: relative;
+  text-decoration: none;
 `;
 
-const ComingProductsBase = styled(Link)`
+const ComingProductsBase = styled.div`
   width: 100vw;
   height: 108rem;
   display: grid;
@@ -65,12 +58,9 @@ const AnimatedText = styled.p`
 
 export const ComingProducts = () => {
   return (
-    <ComingProductsBase to="/welcome">
-      <Header>
-        <Logo />
-      </Header>
-
-      <Main>
+    <ComingProductsBase>
+      <Navbar />
+      <Main to="/welcome">
         <AnimatedLogoBig />
         <AnimatedText>New Products Coming This Summer</AnimatedText>
         <AnimatedCounter>2019</AnimatedCounter>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 export const MacbookPro = () => {
-  return <h1>I am component</h1>;
+  return <Navbar />;
 };
