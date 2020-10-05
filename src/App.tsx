@@ -1,27 +1,24 @@
 import React from 'react';
+import { BrowserRouter, NavLink } from 'react-router-dom';
+import Routes from './routes/Routes';
 import GlobalStyle from './components/GlobalStyle';
-import Input, { Label } from './components/Input';
-import Button from './components/Button';
+import Signup from './pages/Signup';
+import Signin from './pages/Signin';
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Label inputId="hello">Label</Label>
-      <Input
-        type={'email'}
-        isError={true}
-        isDisabled={false}
-        placeholder={'email'}
-        value={'hello'}
-        onChange={(value) => console.log(value)}
-        id="hello"
-      />
-      <h1>hello</h1>
-      <Button onClick={() => console.log('clicked')} disabled={false}>
-        Sign-in
-      </Button>
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes />
+        <GlobalStyle />
+        <NavLink exact to="/signin">
+          Signin
+        </NavLink>
+        <NavLink exact to="/signup">
+          Signup
+        </NavLink>
+      </BrowserRouter>
+    </div>
   );
 }
 

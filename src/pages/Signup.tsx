@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Input, { Label } from '../components/Input';
 import Button from '../components/Button';
 import { AuthPageWrapper } from '../components/PageWrappers';
@@ -79,6 +80,7 @@ const Signup = () => {
       </FormWrapper>
       <FormFooter align="start">
         <span>Already registered?</span>
+        <Link to="/signin">Sign-in</Link>
       </FormFooter>
     </AuthPageWrapper>
   );

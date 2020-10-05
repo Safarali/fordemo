@@ -32,3 +32,30 @@ export const FormControl = styled.div`
     margin-bottom: 4.2rem;
   }
 `;
+
+export const FormButtonControl = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 4.2rem;
+`;
+
+export const FormFooter = styled.div<{ align: 'center' | 'end' | 'start' }>`
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 0.5rem;
+  justify-content: ${(props) => props.align};
+  width: 51rem;
+
+  span {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #000000;
+  }
+
+  a {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #5ac8fa;
+    text-decoration: none;
+  }
+`;

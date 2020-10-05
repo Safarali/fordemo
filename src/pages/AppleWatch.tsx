@@ -1,4 +1,4 @@
 import React from 'react';
-export const Componenent = () => {
+export const AppleWatch = () => {
   return <h1>I am component</h1>;
 };
