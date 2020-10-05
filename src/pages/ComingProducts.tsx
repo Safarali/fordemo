@@ -13,7 +13,7 @@ const Header = styled.header`
 `;
 
 const Main = styled.main`
-  height: calc(100vh - 10rem - 0.7rem);
+  height: 75.5rem;
   width: 170.6rem;
   background: transparent
     linear-gradient(180deg, rgba(90, 200, 250, 0.6) 0%, #ffffff00 75.5rem) 0% 0%
@@ -23,7 +23,7 @@ const Main = styled.main`
 
 const ComingProductsBase = styled(Link)`
   width: 100vw;
-  height: 100vh;
+  height: 108rem;
   display: grid;
   grid-template-rows: max-content max-content;
   justify-items: center;
@@ -31,9 +31,9 @@ const ComingProductsBase = styled(Link)`
 `;
 const AnimatedLogoBig = styled(LogoBig)`
   position: absolute;
-  top: 44%;
+  top: 19.6rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 `;
 
 const AnimatedCounter = styled.div`
@@ -48,7 +48,7 @@ const AnimatedCounter = styled.div`
   justify-content: center;
 
   position: absolute;
-  top: 90%;
+  top: 99%;
   left: 50%;
   transform: translate(calc(-50% + 2rem), -50%);
 `;
@@ -58,9 +58,9 @@ const AnimatedText = styled.p`
   color: #000000;
   font-weight: 400;
   position: absolute;
-  top: 50%;
+  top: 41.1rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 `;
 
 export const ComingProducts = () => {

@@ -5,20 +5,20 @@ import logoGray from '../images/logo_gray.svg';
 export const Logo = styled.img.attrs((props) => ({
   src: logo,
 }))`
-  height: 2.978rem;
+  height: 3.878rem;
   width: auto;
 `;
 
 export const LogoBig = styled.img.attrs((props) => ({
   src: logo,
 }))`
-  height: 35.77rem;
+  height: 35.9rem;
   width: auto;
 `;
 
 export const LogoBigGray = styled.img.attrs((props) => ({
   src: logoGray,
 }))`
-  height: 27.488rem;
+  height: 35.9rem;
   width: auto;
 `;
