@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Input, { Label } from '../components/Input';
 import Button from '../components/Button';
-import { AuthPageWrapper } from '../components/PageWrappers';
+import { AuthPageWrapper } from '../components/AuthPageWrapper';
 import {
   FormWrapper,
   FormTitle,
