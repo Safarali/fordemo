@@ -6,6 +6,8 @@ import {
   FormWrapper,
   FormTitle,
   FormControl,
+  FormButtonControl,
+  FormFooter,
 } from '../components/FormElements';
 
 const Signup = () => {
@@ -69,10 +71,15 @@ const Signup = () => {
             value={password}
           />
         </FormControl>
-        <Button disabled={false} onClick={handleSignup}>
-          Sign-Up
-        </Button>
+        <FormButtonControl>
+          <Button disabled={false} onClick={handleSignup}>
+            Sign-Up
+          </Button>
+        </FormButtonControl>
       </FormWrapper>
+      <FormFooter align="start">
+        <span>Already registered?</span>
+      </FormFooter>
     </AuthPageWrapper>
   );
 };

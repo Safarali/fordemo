@@ -6,6 +6,8 @@ import {
   FormWrapper,
   FormTitle,
   FormControl,
+  FormButtonControl,
+  FormFooter,
 } from '../components/FormElements';
 
 const Signin = () => {
@@ -27,7 +29,7 @@ const Signin = () => {
   return (
     <AuthPageWrapper>
       <FormWrapper>
-        <FormTitle>Sign-Up</FormTitle>
+        <FormTitle>Sign-In</FormTitle>
         <FormControl>
           <Label htmlFor="email">Email</Label>
           <Input
@@ -52,10 +54,15 @@ const Signin = () => {
             value={password}
           />
         </FormControl>
-        <Button disabled={false} onClick={handleSignin}>
-          Sign-In
-        </Button>
+        <FormButtonControl>
+          <Button disabled={false} onClick={handleSignin}>
+            Sign-In
+          </Button>
+        </FormButtonControl>
       </FormWrapper>
+      <FormFooter align="end">
+        <span>Not registered?</span>
+      </FormFooter>
     </AuthPageWrapper>
   );
 };
