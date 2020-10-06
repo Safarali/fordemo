@@ -11,10 +11,6 @@ const NavIcon = styled.img`
     transform: scale(1.2);
     filter: contrast(1%);
   }
-
-  &.active {
-    filter: contrast(1%);
-  }
 `;
 
 type NavIconsBaseProps = {
@@ -22,32 +18,30 @@ type NavIconsBaseProps = {
   direction: 'row' | 'column';
 };
 
-export const NavIconsBase = styled.nav<NavIconsBaseProps>`
-  width: 17rem;
-  height: 29.2rem;
+export const IconsNavBase = styled.nav<NavIconsBaseProps>`
   display: flex;
   flex-direction: ${(props) => props.direction};
   justify-content: space-between;
+  align-items: center;
 `;
 
 type IconsNavProps = {
   direction: 'column' | 'row';
   animate?: boolean;
-  Wrapper: any;
 };
-const IconsNav: React.FC<IconsNavProps> = ({ direction, animate, Wrapper }) => {
+const IconsNav: React.FC<IconsNavProps> = ({ direction, animate }) => {
   return (
-    <Wrapper direction={direction} animate={animate}>
+    <IconsNavBase direction={direction} animate={animate}>
       <NavLink to="/iphone">
         <NavIcon src={iphoneIcon} />
       </NavLink>
-      <NavLink to="/macbook-pro">
+      <NavLink to="/macbook-pro" activeClassName="active">
         <NavIcon src={macbookIcon} />
       </NavLink>
-      <NavLink to="/apple-watch">
+      <NavLink to="/apple-watch" activeClassName="active">
         <NavIcon src={watchIcon} />
       </NavLink>
-    </Wrapper>
+    </IconsNavBase>
   );
 };
 

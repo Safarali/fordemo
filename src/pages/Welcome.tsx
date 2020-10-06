@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import IconsNav, { NavIconsBase } from '../components/IconsNav';
+import IconsNav from '../components/IconsNav';
 import { LogoBigGray } from '../components/Logo';
 
 const WelcomeBase = styled.div`
@@ -54,7 +54,8 @@ const MainLink = styled(Link)`
   transform: translateX(-50%);
 `;
 
-const IconsWrapper = styled(NavIconsBase)`
+const HorizontalIconsNav = styled.div`
+  width: 17rem;
   position: absolute;
   top: 80.3rem;
   left: 50%;
@@ -68,7 +69,9 @@ export const Welcome = () => {
         <MainLogo />
         <MainText>Welcome to Apple</MainText>
         <MainLink to="#">See our Products</MainLink>
-        <IconsNav Wrapper={IconsWrapper} direction="row" animate={true} />
+        <HorizontalIconsNav>
+          <IconsNav direction="row" animate={true} />
+        </HorizontalIconsNav>
       </Main>
     </WelcomeBase>
   );
