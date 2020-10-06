@@ -33,7 +33,7 @@ const AnimatedCounter = styled.div`
   height: 8rem;
   font-size: 6rem;
   font-family: 'Poppins', arial;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3rem;
   color: #000000;
   display: flex;

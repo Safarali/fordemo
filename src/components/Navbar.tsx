@@ -6,7 +6,7 @@ import { Logo } from './Logo';
 type NavProps = {
   exact?: boolean;
   to?: string;
-  animated?: boolean;
+  showAll?: boolean;
 };
 
 const AnimatedLogoWrapper = styled.div<NavProps>`
@@ -16,7 +16,7 @@ const AnimatedLogoWrapper = styled.div<NavProps>`
 
   position: absolute;
   height: 10rem;
-  width: ${(props) => (props.animated ? '10rem' : '100%')};
+  width: ${(props) => (props.showAll ? '10rem' : '100%')};
   background-color: #000000;
   transition: all 0.3s;
 `;
@@ -74,12 +74,12 @@ const NavbarBase = styled.header`
 `;
 
 type NavbarProps = {
-  animated?: boolean;
+  showAll?: boolean;
 };
-const Navbar: React.FC<NavbarProps> = ({ animated }) => {
+const Navbar: React.FC<NavbarProps> = ({ showAll }) => {
   return (
     <NavbarBase>
-      <AnimatedLogoWrapper animated={animated}>
+      <AnimatedLogoWrapper showAll={showAll}>
         <Link to="/coming-products">
           <NavbarLogo />
         </Link>
