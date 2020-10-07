@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import IconsNav from '../components/IconsNav';
 import { LogoBigGray } from '../components/Logo';
 
-const WelcomeBase = styled.div`
+const PageBase = styled.div`
   width: 100vw;
   height: 108rem;
   display: grid;
@@ -13,7 +13,7 @@ const WelcomeBase = styled.div`
   justify-items: center;
 `;
 
-const Main = styled.main`
+const PageContent = styled.main`
   height: 98rem;
   width: calc(100% - 20rem);
   background: transparent linear-gradient(90deg, #f2f2f2 0%, #ffffff00 100%) 0%
@@ -22,14 +22,14 @@ const Main = styled.main`
   text-decoration: none;
 `;
 
-const MainLogo = styled(LogoBigGray)`
+const PageBigLogo = styled(LogoBigGray)`
   position: absolute;
   top: 20.061rem;
   left: 50%;
   transform: translateX(-50%);
 `;
 
-const MainText = styled.h1`
+const PageHeading = styled.h1`
   font-size: 7.9rem;
   font-weight: 700;
   color: #000000;
@@ -41,7 +41,7 @@ const MainText = styled.h1`
   transform: translateX(-50%);
 `;
 
-const MainLink = styled(Link)`
+const PageCTA = styled(Link)`
   text-decoration: none;
   font-size: 2rem;
   font-weight: 400;
@@ -63,16 +63,16 @@ const HorizontalIconsNav = styled.div`
 `;
 export const Welcome = () => {
   return (
-    <WelcomeBase>
+    <PageBase>
       <Navbar showAll={true} />
-      <Main>
-        <MainLogo />
-        <MainText>Welcome to Apple</MainText>
-        <MainLink to="#">See our Products</MainLink>
+      <PageContent>
+        <PageBigLogo />
+        <PageHeading>Welcome to Apple</PageHeading>
+        <PageCTA to="#">See our Products</PageCTA>
         <HorizontalIconsNav>
           <IconsNav direction="row" animate={true} />
         </HorizontalIconsNav>
-      </Main>
-    </WelcomeBase>
+      </PageContent>
+    </PageBase>
   );
 };

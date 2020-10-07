@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { Welcome } from '../pages/Welcome';
 import { ComingProducts } from '../pages/ComingProducts';
 import { AppleWatch } from '../pages/AppleWatch';
-import { Iphone } from '../pages/Iphone';
+import Iphone from '../pages/iphone';
 import { MacbookPro } from '../pages/MacbookPro';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
