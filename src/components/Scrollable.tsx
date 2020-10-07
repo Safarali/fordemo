@@ -38,6 +38,7 @@ const Scrollable: React.FC<ScrollabeProps> = ({ height, onScroll }) => {
       e.target.scrollLeft / (e.target.scrollWidth - e.target.clientWidth)
     );
   };
+
   return <ScrollableBase height={height} onScroll={handleOnScroll} />;
 };
 
