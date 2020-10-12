@@ -80,7 +80,7 @@ const Signup = () => {
       </FormWrapper>
       <FormFooter align="start">
         <span>Already registered?</span>
-        <Link to="/signin">Sign-in</Link>
+        <Link to="/">Sign-in</Link>
       </FormFooter>
     </AuthPageWrapper>
   );

@@ -13,7 +13,7 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/signup" component={Signup} />
-      <Route exact path="/signin" component={Signin} />
+      <Route exact path="/" component={Signin} />
       <Route exact path="/coming-products" component={ComingProducts} />
       <Route exact path="/welcome" component={Welcome} />
       <Route exact path="/apple-watch" component={AppleWatch} />
